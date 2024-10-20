@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Run Selenium Script</title>
+</head>
+<body>
+    <h1>Run Selenium Script</h1>
+    {% if script_has_run %}
+        <p>The script has already been run. You cannot run it again until you refresh the page.</p>
+        <form action="/reset" method="post">
+            <button type="submit">Reset Script</button>
+        </form>
+    {% else %}
+        <form action="/run_script" method="post">
+            <button type="submit">Run Script</button>
+        </form>
+    {% endif %}
+</body>
+</html>
